@@ -14,7 +14,7 @@ st.write("API Key Connected Successfully")
 load_dotenv()
 
 genai.configure(
-    api_key=os.getenv("GEMINI_API_KEY")
+    api_key=st.secrets["GEMINI_API_KEY"]
 )
 
 model = genai.GenerativeModel(
